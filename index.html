@@ -2,252 +2,109 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="style.css" title="Default">
-  <link rel="alternate stylesheet" type="text/css" href="plain.css" title="Bird's Eye View">
-  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+  <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
   <script type="text/javascript" src="foopy.js"></script>
   <script type="text/javascript" src="l10n.js"></script>
   <link rel="resource" type="application/l10n" href="locales.ini" />
-  <link href="http://www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet"/>
-  <title>What can I do for Mozilla</title>
+  <title>What can I do for Bitcoin</title>
+  <meta name="description" content="Ask not what Bitcoin can do for you, but what you can do for Bitcoin">
 </head>
-<body>
-
-  <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+<body id="asknot">
   <div id="lang">
     <span data-l10n-id="lang-selection">language: </span>
     <select>
-      <option value='de'>de</option>
       <option selected value='en'>en</option>
-      <option value='es'>es</option>
-      <option value='fr'>fr</option>
-      <option value='nl'>nl</option>
-      <option value='el'>gr</option>
-      <option value='hi-IN'>hi-IN</option>
-      <option value='it'>it</option>
-      <option value='ar'>ar</option>
-      <option value='pt-BR'>pt-BR</option>
-      <option value='ro'>ro</option>
-      <option value='pl'>pl</option>
-      <option value='tr'>tr</option>
-      <option value='te'>te</option>
-      <option value='zh-TW'>zh-TW</option>
-      <option value='zh-CN'>zh-CN</option>
-      <option value='bn-BD'>bn-BD</option>
     </select>
   </div>
-
-  <div id="wrapper">
-
-    <div class="group" id="proglang">
-      <span class="question" data-l10n-id="question"></span>
-      <ul class="choices">
-        <li next-group="cpp">C++</li>
-        <li next-group="js">JavaScript</li>
-        <li next-group="java">Java</li>
-        <li next-group="py">Python</li>
-        <li next-group="php">PHP</li>
-        <li next-group="c">C</li>
-        <li target="http://www.rust-lang.org">Rust
-          <div class="extra" data-l10n-id="rust-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="cpp">
-      <span class="question" data-l10n-id="cpp-intro"></span>
-      <ul class="choices">
-        <li next-group="ff-cpp">Gecko
-          <div class="extra" data-l10n-id="cpp-gecko-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/B2G/Hacking">Boot2Gecko
-          <div class="extra" data-l10n-id="cpp-b2g-extra"></div>
-        </li>
-        <li target="http://developer.mozilla.org/En/Simple_Thunderbird_build">Thunderbird
-          <div class="extra" data-l10n-id="cpp-thunderbird-extra"></div>
-        </li>
-        <li target="http://www.seamonkey-project.org">Seamonkey
-          <div class="extra" data-l10n-id="cpp-seamonky-extra"></div>
-        </li>
-        <li target="http://github.com/zpao/v8monkey">v8monkey
-          <div class="extra" data-l10n-id="cpp-v8-extra"></div>
-        </li>
-        <li target="https://github.com/kripken/emscripten/">emscripten
-          <div class="extra" data-l10n-id="cpp-ems-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/SVG:Contribute">SVG Project
-          <div class="extra" data-l10n-id="cpp-svg-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Firefox/Windows_8_Integration#Platform_Integration_Windows_8_Development">Windows 8 Integration
-          <div class="extra" data-l10n-id="cpp-win8-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/MathML:Home_Page">MathML
-          <div class="extra" data-l10n-id="cpp-mathml-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="c">
-      <span class="question" data-l10n-id="c-intro"></span>
-      <ul class="choices">
-        <li target="https://developer.mozilla.org/en-US/docs/Getting_Started_With_NSS">NSS
-          <div class="extra" data-l10n-id="c-nss-extra"></div>
-        </li>
-        <li target="http://www.opus-codec.org/development/">Opus
-          <div class="extra" data-l10n-id="c-opus-extra"></div>
-        </li>
-        <li target="https://xiph.org/daala/">Daala
-          <div class="extra" data-l10n-id="c-daala-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="js">
-      <span class="question" data-l10n-id="js-intro"></span>
-      <ul class="choices">
-        <li next-group="ff-js">Firefox
-          <div class="extra" data-l10n-id="js-ff-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Mobile/Get_Involved">Mobile Firefox
-          <div class="extra" data-l10n-id="js-ff-mobile-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/PDF.js">pdf.js
-          <div class="extra" data-l10n-id="js-pdfjs-extra"></div>
-        </li>
-        <li target="https://github.com/mozilla/shumway/wiki">Shumway
-          <div class="extra" data-l10n-id="js-shumway-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Jetpack">The addon SDK
-          <div class="extra" data-l10n-id="js-jetpack-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Gaia">Gaia
-          <div class="extra" data-l10n-id="js-gaia-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/DXR">DXR
-          <div class="extra" data-l10n-id="js-dxr-extra"></div>
-        </li>
-        <li target="http://developer.mozilla.org/En/Simple_Thunderbird_build">Thunderbird
-          <div class="extra" data-l10n-id="js-thunderbird-extra"></div>
-        </li>
-        <li target="http://www.seamonkey-project.org">Seamonkey
-          <div class="extra" data-l10n-id="js-seamomky-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Webdev/GetInvolved">Web development
-          <div class="extra" data-l10n-id="js-webdev-extra"></div>
-        </li>
-        <li target="http://www.benmoskowitz.com/?p=527">Popcorn
-          <div class="extra" data-l10n-id="js-popcorn-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Firefox/Windows_8_Integration#Front_End_Windows_8_Development">Windows 8 Integration
-          <div class="extra" data-l10n-id="js-win8-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Persona">Persona
-          <div class="extra" data-l10n-id="js-persona-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="java">
-      <span class="question" data-l10n-id="java-intro"></span>
-      <ul class="choices">
-        <li target="https://wiki.mozilla.org/Mobile/Get_Involved">Mobile Firefox
-          <div class="extra" data-l10n-id="java-mobile-extra"></div>
-        </li>
-        <li target="https://developer.mozilla.org/en-US/docs/Rhino">Rhino
-          <div class="extra" data-l10n-id="java-rhino-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="py">
-      <span class="question" data-l10n-id="py-intro"></span>
-      <ul class="choices">
-        <li target="http://developer.mozilla.org/En/Introduction">Firefox
-          <div class="extra" data-l10n-id="py-firefox-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Webdev/GetInvolved">Web development
-          <div class="extra" data-l10n-id="py-webdev-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/DXR">DXR
-          <div class="extra" data-l10n-id="py-dxr-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Auto-tools/New_Contributor">Tools &amp; Automation
-          <div class="extra" data-l10n-id="py-tools-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="php">
-      <span class="question" data-l10n-id="php-intro"></span>
-      <ul class="choices">
-        <li target="https://wiki.mozilla.org/Webdev/GetInvolved/WordPress">WordPress
-          <div class="extra" data-l10n-id="php-wordpress-extra"></div>
-        </li>
-        <li target="https://github.com/mozilla/Marketplace.PHP">Marketplace
-          <div class="extra" data-l10n-id="php-marketplace-extra"></div>
-        </li>
-        <li target="https://github.com/mozilla/mediawiki-bugzilla">The Mediawiki-Bugzilla plugin
-          <div class="extra" data-l10n-id="php-mediawiki-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="ff-cpp">
-      <span class="question" data-l10n-id="ff-cpp-intro"></span>
-      <ul class="choices">
-        <li target="http://developer.mozilla.org/En/Introduction">General Firefox work
-          <div class="extra" data-l10n-id="ff-cpp-ff-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Platform/GFX/Contribute">Graphics
-          <div class="extra" data-l10n-id="ff-cpp-graphics-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Accessibility/Contribute">Accessibility
-          <div class="extra" data-l10n-id="ff-cpp-access-extra"></div>
-        </li>
-        <li target="http://wiki.mozilla.org/Networking">Networking
-          <div class="extra" data-l10n-id="ff-cpp-net-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/JavaScript:New_to_SpiderMonkey">Spidermonkey: the JavaScript engine
-          <div class="extra" data-l10n-id="ff-cpp-spider-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Media">Media
-          <div class="extra" data-l10n-id="ff-cpp-media-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="group" id="ff-js">
-      <span class="question" data-l10n-id="ff-js-intro"></span>
-      <ul class="choices">
-        <li target="http://developer.mozilla.org/En/Introduction" data-l10n-id="ff-js-ff"></li>
-        <li target="https://wiki.mozilla.org/DevTools/GetInvolved">Developer tools
-          <div class="extra" data-l10n-id="ff-js-dev-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/Services/Sync#Get_Involved">Sync
-          <div class="extra" data-l10n-id="ff-js-sync-extra"></div>
-        </li>
-      </ul>
-    </div>
-
-    <div id="responses">
-      <div id="ok"><a href="javascript:" data-l10n-id="more"></a></div>
-      <div id="next">
-        <a href="javascript:">
-          <span data-l10n-id="negative1" class="negative"></span>
-          <span data-l10n-id="negative2" class="negative"></span>
-          <span data-l10n-id="negative3" class="negative"></span>
-          <span data-l10n-id="negative4" class="negative"></span>
-          <span data-l10n-id="negative5" class="negative"></span>
-          <span data-l10n-id="negative6" class="negative"></span>
-        </a>
+  <a id="skip" href="/projects.html">Just want a list of projects?</a>
+  <div id="page">
+      <div class="group" id="proglang">
+        <span class="question" data-l10n-id="question"></span>
+        <ul class="choices">
+          <li next-group="cpp">C++</li>
+          <li next-group="js">JavaScript</li>
+          <li next-group="java">Java</li>
+          <li next-group="py">Python</li>
+          <li next-group="c">C</li>
+        </ul>
       </div>
-      <div id="back"><a href="javascript:" data-l10n-id="back"></a></div>
-    </div>
+      <div class="group" id="cpp">
+        <span class="question" data-l10n-id="cpp-intro"></span>
+        <ul class="choices">
+          <li target="https://github.com/bitcoin/bitcoin">Bitcoin-Qt
+            <div class="extra" data-l10n-id="cpp-bitcoinqt-extra"></div>
+          </li>
+          <li target="https://github.com/etotheipi/BitcoinArmory">Armory
+            <div class="extra" data-l10n-id="cpp-armory-extra"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="group" id="c">
+        <span class="question" data-l10n-id="c-intro"></span>
+        <ul class="choices">
+          <li target="https://github.com/ckolivas/cgminer">cgminer
+            <div class="extra" data-l10n-id="c-cgminer-extra"></div>
+          </li>
+          <li target="https://github.com/luke-jr/bfgminer">bfgminer
+            <div class="extra" data-l10n-id="c-bfgminer-extra"></div>
+          </li>
+        </ul>
+      </div>
 
-    <div id="footer" data-l10n-id="credits"></div>
+      <div class="group" id="java">
+        <span class="question" data-l10n-id="java-intro"></span>
+        <ul class="choices">
+          <li target="https://github.com/jim618/multibit">Multibit
+            <div class="extra" data-l10n-id="java-multibit-extra"></div>
+          </li>
+          <li target="https://code.google.com/p/bitcoinj/">BitcoinJ
+            <div class="extra" data-l10n-id="java-bitcoinj-extra"></div>
+          </li>
+          <li target="https://code.google.com/p/bitcoin-wallet/">Bitcoin Wallet for Android
+            <div class="extra" data-l10n-id="java-bwfa-extra"></div>
+          </li>
+          <li target="https://wiki.mozilla.org/PDF.js">Armory
+            <div class="extra" data-l10n-id="cpp-armory-extra"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group" id="py">
+        <span class="question" data-l10n-id="py-intro"></span>
+        <ul class="choices">
+          <li target="https://gitorious.org/bitcoin/eloipool">Eloipool
+            <div class="extra" data-l10n-id="py-eloipool-extra"></div>
+          </li>
+          <li target="https://github.com/forrestv/p2pool">P2Pool
+            <div class="extra" data-l10n-id="py-p2pool-extra"></div>
+          </li>
+          <li target="https://github.com/spesmilo/electrum">Electrum
+            <div class="extra" data-l10n-id="py-electrum-extra"></div>
+          </li>
+          <li target="https://github.com/etotheipi/BitcoinArmory">Armory
+            <div class="extra" data-l10n-id="py-armory-extra"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group" id="js">
+        <span class="question" data-l10n-id="js-intro"></span>
+        <ul class="choices">
+          <li target="https://github.com/brainwallet/brainwallet.github.com">Brainwallet
+            <div class="extra" data-l10n-id="js-brainwallet-extra"></div>
+          </li>
+        </ul>
+      </div>
+    <div id="responses">
+      <a id="ok" class="button"><i class="icon-check"></i>  <span data-l10n-id="more"></span></a>
+      <a id="next" class="button"><i class="icon-arrow-right"></i> <span data-l10n-id="negative"></span></a>
+      <a id="back" class="button"><i class="icon-undo"></i> <span data-l10n-id="back"></span></a>
+    </div>
+    <footer id="footer" data-l10n-id="credits"></footer>
   </div>
-  <footer>
-    <script src="http://www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
-  </footer>
 </body>
 </html>

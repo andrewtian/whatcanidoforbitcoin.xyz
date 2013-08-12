@@ -4,21 +4,9 @@
     var choices = [];
     var stack = [];
 
-    function chooseNegativeResponse() {
-        var responses = $('.negative').not('.visible');
-        return responses[Math.floor(Math.random() * responses.length)];
-    }
-
-    function updateNegativeResponse() {
-        var negative = chooseNegativeResponse();
-        $($('.negative.visible')[0]).removeClass('visible');
-        $(negative).addClass('visible');  
-    }
-
     function updateCurrentChoice(lastIndex) {
         var lastChoice = $('.choices li', groupNode)[choices[choices.length - 1][lastIndex]];
         var choice = $('.choices li', groupNode)[choices[choices.length - 1][choiceIndex[choiceIndex.length - 1]]];
-        updateNegativeResponse();
         lastChoice.style.display = 'none';
         choice.style.display = 'inline';
         $('#ok')[0].firstChild.href = choice.hasAttribute('next-group') ?
@@ -54,8 +42,8 @@
             }
             choices.push(shuffle(c));
         }
-        $('#back')[0].style.display = group === 'proglang' ? 'none' : 'block';
-        $('#next')[0].style.display = group !== 'proglang' && choices[choices.length - 1].length == 1 ? 'none' : 'block';
+        $('#back')[0].style.display = group === 'proglang' ? 'none' : '';
+        $('#next')[0].style.display = group !== 'proglang' && choices[choices.length - 1].length == 1 ? 'none' : '';
         $('.question', groupNode)[0].style.display = 'block';
         updateCurrentChoice(choiceIndex[choiceIndex.length - 1]);
     }
@@ -93,9 +81,9 @@
     }
 
     $(window).load(function() {
-        $('#ok a:first').on('click', investigate);
-        $('#next a:first').on('click', nextChoice);
-        $('#back a:first').on('click', takeBack);
+        $('#ok').on('click', investigate);
+        $('#next').on('click', nextChoice);
+        $('#back').on('click', takeBack);
         $('#lang select').on('change', langChange);
 
         // Detected browser language
