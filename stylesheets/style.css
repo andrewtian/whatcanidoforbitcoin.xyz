@@ -117,13 +117,13 @@ strong {
 footer {
   color: #DFC29E;
   text-align: center;
-  margin: 80px;
+  margin: 80px 0;
   line-height: 1.4;
   font-size: 14px;
 }
 
 footer a {
-
+  color: #C5AC8C;
 }
 
 /* Projects */
