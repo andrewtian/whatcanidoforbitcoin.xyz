@@ -24,9 +24,16 @@ strong {
 
 #skip {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0;
+  left: 0;
   color: #B9A183;
+  font-size: 12px;
+  background: #FFF;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #796956;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .15)
 }
 
 #lang {
