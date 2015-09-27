@@ -1,3 +1,5 @@
+![site preview](preview.png)
+
 Ask not what Bitcoin can do for you but what you can do for Bitcoin!
 
 This project is a place for contributors to start looking for new projects to work on. This will guide you in the right direction depending on you prefered development language.
@@ -9,8 +11,5 @@ Alternatively, a list of active projects categorized by their function in Bitcoi
 	cd asknot
 Open index.html in your favourite browser!
 
-## Credits
-
-- Andrew Tian
-- Josh Matthews <josh@joshmatthews.net>
-- Other contributors listed at https://github.com/andrewtian/asknot-bitcoin/contributors
+## Contributors
+- Thank all who did at https://github.com/andrewtian/asknot-bitcoin/contributors
